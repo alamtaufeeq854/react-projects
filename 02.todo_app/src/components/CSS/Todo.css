@@ -56,5 +56,29 @@
 @media (max-width: 720px) {
   .todo {
     width: 400px;
+    padding-left: 15px;
+  
   }
+}
+
+@media (max-width: 480px) {
+  .todo {
+    width: 300px;
+  
+  }
+
+
+  
+.todo-add-btn {
+  
+
+  margin-left: -87px;
+ 
+}
+
+
+.todo-input{
+  font-size: 14px;
+}
+
 }
