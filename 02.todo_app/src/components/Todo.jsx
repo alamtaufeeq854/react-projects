@@ -8,10 +8,12 @@ const Todo = () => {
   const inputRef = useRef(null);
 
   const add = () => {
-    setTodos([
-      ...todos,
-      { no: count++, text: inputRef.current.value, display: "" },
-    ]);
+    if (inputRef.current.value != "") {
+      setTodos([
+        ...todos,
+        { no: count++, text: inputRef.current.value, display: "" },
+      ]);
+    }
   };
 
   const deleteTodo = (no) => {
