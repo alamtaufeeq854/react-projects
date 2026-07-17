@@ -13,6 +13,8 @@ const Todo = () => {
         ...todos,
         { no: count++, text: inputRef.current.value, display: "" },
       ]);
+
+      inputRef.current.value = "";
     }
   };
 
@@ -49,10 +51,10 @@ const Todo = () => {
         </div>
       </div>
       <div className="todo-list">
-        {todos.map((item, index) => {
+        {todos.map((item) => {
           return (
             <TodoItems
-              key={index}
+              key={item.no}
               no={item.no}
               display={item.display}
               text={item.text}
