@@ -29,3 +29,9 @@
 .line-through {
   text-decoration: line-through solid rgb(42, 42, 231);
 }
+
+@media (max-width: 480px) {
+  .todo-items-cross-icon {
+    padding-right: 8px;
+  }
+}
