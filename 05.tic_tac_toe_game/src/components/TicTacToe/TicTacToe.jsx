@@ -29,22 +29,22 @@ const TicTacToe = () => {
 
     if (data[num] !== "") return;
 
-    if (count === 8 && !lock) {
-      titleRef.current.innerHTML = "It's a Draw !";
-      setLock(true);
-    }
-
     if (count % 2 === 0) {
       e.target.innerHTML = `<img src=${cross}/>`;
       data[num] = "x";
-      setCount(++count);
+      setCount(1 + count);
     } else {
       e.target.innerHTML = `<img src=${circle}/>`;
       data[num] = "o";
-      setCount(++count);
+      setCount(1 + count);
     }
 
-    checkWin();
+    const isWin = checkWin();
+
+    if (count === 8 && !isWin) {
+      titleRef.current.innerHTML = "It's a Draw !";
+      setLock(true);
+    }
   };
 
   const won = (winner) => {
@@ -55,26 +55,30 @@ const TicTacToe = () => {
     } else {
       titleRef.current.innerHTML = `Congratulations: <img src=${cross}/>`;
     }
+
+    return true;
   };
 
   const checkWin = () => {
     if (data[0] === data[1] && data[1] === data[2] && data[2] !== "") {
-      won(data[1]);
+      return won(data[1]);
     } else if (data[3] === data[4] && data[4] === data[5] && data[5] !== "") {
-      won(data[5]);
+      return won(data[5]);
     } else if (data[6] === data[7] && data[7] === data[8] && data[8] !== "") {
-      won(data[7]);
+      return won(data[7]);
     } else if (data[0] === data[3] && data[3] === data[6] && data[6] !== "") {
-      won(data[6]);
+      return won(data[6]);
     } else if (data[1] === data[4] && data[4] === data[7] && data[7] !== "") {
-      won(data[7]);
+      return won(data[7]);
     } else if (data[2] === data[5] && data[5] === data[8] && data[8] !== "") {
-      won(data[5]);
+      return won(data[5]);
     } else if (data[0] === data[4] && data[4] === data[8] && data[8] !== "") {
-      won(data[8]);
+      return won(data[8]);
     } else if (data[2] === data[4] && data[4] === data[6] && data[6] !== "") {
-      won(data[6]);
+      return won(data[6]);
     }
+
+    return false;
   };
 
   const reset = () => {
@@ -84,6 +88,7 @@ const TicTacToe = () => {
     boxArray.forEach((e) => {
       e.current.innerHTML = "";
     });
+    setCount(0);
   };
 
   return (
