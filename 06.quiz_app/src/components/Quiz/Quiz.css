@@ -1,0 +1,93 @@
+.container {
+  background: #fff;
+  width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  color: #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 40px 50px;
+}
+
+.container hr {
+  height: 2px;
+  border: none;
+  background: #707070;
+}
+
+.container h2 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.container ul li {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 15px;
+  border: 1px solid #686868;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container button {
+  margin: auto;
+  width: 250px;
+  height: 65px;
+  background: #553f9a;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background: #6c4bcf;
+  transform: scale(1.05);
+}
+
+.container .index {
+  font-size: 18px;
+  margin: auto;
+}
+
+.container .correct {
+  background: #dffff2;
+  border-color: #00d397;
+}
+
+.container .wrong {
+  background: #ffebeb;
+  border-color: #ff4a4a;
+}
+
+.home-btn {
+  top: 20px;
+  left: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 300px;
+  }
+}
