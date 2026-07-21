@@ -24,4 +24,3 @@ An AI-powered image generator built with React and the Pollinations API.
 npm install
 npm run dev
 ```
-p
