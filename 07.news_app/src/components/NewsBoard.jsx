@@ -5,7 +5,7 @@ const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const url = `https://content.guardianapis.com/search?q=${category}&show-fields=thumbnail&page-size=10&api-key=${import.meta.env.VITE_GUARDIAN_API_KEY}`;
+    const url = `https://content.guardianapis.com/search?q=${category}&show-fields=thumbnail&page-size=12&api-key=${import.meta.env.VITE_GUARDIAN_API_KEY}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
