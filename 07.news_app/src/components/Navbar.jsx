@@ -93,7 +93,9 @@ const Navbar = ({ setCategory }) => {
           </ul>
         </div>
 
-        <a className="navbar-brand" href="#">
+        <a
+          className="navbar-brand"
+          href="https://alamtaufeeq854.github.io/react-projects/">
           <span className="badge bg-light text-dark fs-4">Back</span>
         </a>
       </div>
