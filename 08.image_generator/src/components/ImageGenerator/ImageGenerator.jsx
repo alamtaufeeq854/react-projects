@@ -39,7 +39,7 @@ const ImageGenerator = () => {
         </div>
       </div>
 
-      <h1 ref={msgRef} className="msg"></h1>
+      <p ref={msgRef} className="msg"></p>
 
       <div className="search-box">
         <input
