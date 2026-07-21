@@ -1,23 +1,23 @@
 # 📰 React News App
 
-A news application built with React that fetches the latest headlines using the NewsAPI. Users can browse news across multiple categories and read full articles from the original source.
+A news application built with React that fetches the latest headlines using **The Guardian Open Platform API**. Users can browse news across different categories and read complete articles from the original source.
 
 ## Features
 
 - Real-time News Fetching
-- NewsAPI Integration
+- The Guardian API Integration
 - Category-wise News
+- Dynamic Content Rendering
 - Responsive UI
 - Fallback Images
-- Dynamic Data Rendering
 
 ## Tech Stack
 
 - React
 - JavaScript
 - Bootstrap
-- NewsAPI
+- The Guardian Open Platform API
 
 ## Purpose
 
-This project was built as a learning exercise to strengthen my understanding of API integration, asynchronous data fetching, React state management, and rendering dynamic content.
+This project was built as a learning exercise to strengthen my understanding of REST API integration, asynchronous data fetching, React state management, and rendering dynamic content from external APIs.
