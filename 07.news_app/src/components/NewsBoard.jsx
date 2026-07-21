@@ -5,12 +5,12 @@ const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`;
-
+    const url = `https://content.guardianapis.com/search?q=${category}&show-fields=thumbnail&page-size=10&api-key=${import.meta.env.VITE_GUARDIAN_API_KEY}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setArticles(data.articles || []);
+        console.log(data);
+        setArticles(data.response.results || []);
       });
   }, [category]);
 
@@ -23,10 +23,10 @@ const NewsBoard = ({ category }) => {
       {articles.map((news, index) => (
         <NewsItem
           key={index}
-          title={news.title}
-          description={news.description}
-          src={news.urlToImage}
-          url={news.url}
+          title={news.webTitle}
+          description={news.sectionName}
+          src={news.fields?.thumbnail}
+          url={news.webUrl}
         />
       ))}
     </div>

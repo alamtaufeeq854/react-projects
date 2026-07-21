@@ -52,9 +52,9 @@ const Navbar = ({ setCategory }) => {
                 className="nav-link"
                 href="#"
                 onClick={() => {
-                  setCategory("health");
+                  setCategory("politics");
                 }}>
-                Health
+                Politics
               </a>
             </li>
 
@@ -62,10 +62,10 @@ const Navbar = ({ setCategory }) => {
               <a
                 className="nav-link"
                 onClick={() => {
-                  setCategory("science");
+                  setCategory("culture");
                 }}
                 href="#">
-                Science
+                Culture
               </a>
             </li>
 
@@ -74,7 +74,7 @@ const Navbar = ({ setCategory }) => {
                 className="nav-link"
                 href="#"
                 onClick={() => {
-                  setCategory("sports");
+                  setCategory("sport");
                 }}>
                 Sports
               </a>
@@ -84,10 +84,10 @@ const Navbar = ({ setCategory }) => {
               <a
                 className="nav-link"
                 onClick={() => {
-                  setCategory("entertainment");
+                  setCategory("environment");
                 }}
                 href="#">
-                Entertainment
+                Environment
               </a>
             </li>
           </ul>
