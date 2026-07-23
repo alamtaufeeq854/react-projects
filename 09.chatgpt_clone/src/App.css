@@ -224,10 +224,10 @@ body {
 }
 
 .home-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 18px;
+  position: sticky;
+  top: 55px;
+  left: 320px;
+  padding: 10px 10px;
   border: none;
   border-radius: 8px;
   background: #2563eb;
