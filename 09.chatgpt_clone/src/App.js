@@ -109,9 +109,16 @@ function App() {
           </div>
         </div>
       </div>
-
       <div className="main">
         <div className="chats">
+          <button
+            onClick={() => {
+              window.location.href =
+                "https://alamtaufeeq854.github.io/react-projects/";
+            }}
+            className="home-btn">
+            Back
+          </button>
           <div className="chat">
             <img className="chatimg" src={user} alt="" />
             <p className="txt"> </p>

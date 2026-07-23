@@ -223,6 +223,26 @@ body {
   background: transparent;
 }
 
+.home-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;
