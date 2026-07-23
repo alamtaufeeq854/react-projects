@@ -16,7 +16,6 @@ Rules:
 - No bullet points.
 - Keep responses short unless the user asks for details.`,
   });
-  console.log(response.text);
   return response.text;
 }
 
